@@ -1,8 +1,6 @@
-import {v4 as uuidV4} from 'uuid'
+import { Entity } from "../core/entities/entity";
 
-export class Student {
-   public id: string
-   constructor(public name: string, id?: string) {
-      this.id = id ?? uuidV4()
-   }
+interface StudentProps {
+  name: string;
 }
+export class Student extends Entity<StudentProps> {}

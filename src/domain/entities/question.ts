@@ -1,19 +1,10 @@
-import { v4 as uuidV4 } from "uuid";
+import { Slug } from "./value-objects/slug";
+import { Entity } from "../core/entities/entity";
 
 interface QuestionProps {
   title: string;
   content: string;
+  slug: Slug;
   authorId: string;
 }
-export class Question {
-  public id: string;
-  public title: string;
-  public content: string;
-  public authorId: string;
-  constructor(props: QuestionProps, id?: string) {
-    this.title = props.title;
-    this.content = props.content;
-    this.authorId = props.authorId;
-    this.id = id ?? uuidV4();
-  }
-}
+export class Question extends Entity<QuestionProps> {}

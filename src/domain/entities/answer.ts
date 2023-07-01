@@ -1,20 +1,12 @@
-import { v4 as uuidV4 } from "uuid";
+import { Entity } from "../core/entities/entity";
 
 interface AnswerProps {
   content: string;
   authorId: string;
   questionId: string;
 }
-export class Answer {
-  public id: string;
-  public content: string;
-  public authorId: string;
-  public questionId: string;
-
-  constructor(public props: AnswerProps, id?: string) {
-    this.content = props.content;
-    this.authorId = props.authorId;
-    this.questionId = props.questionId;
-    this.id = id ?? uuidV4();
+export class Answer extends Entity<AnswerProps> {
+  get content() {
+    return this.props.content;
   }
 }
