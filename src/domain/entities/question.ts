@@ -1,10 +1,19 @@
-import {v4 as uuidV4} from 'uuid'
+import { v4 as uuidV4 } from "uuid";
 
-export class Question {
-   public id: string
-
-   constructor(public title: string, public content: string, id?: string) {
-      this.id = id ?? uuidV4()
-   }
+interface QuestionProps {
+  title: string;
+  content: string;
+  authorId: string;
 }
-
+export class Question {
+  public id: string;
+  public title: string;
+  public content: string;
+  public authorId: string;
+  constructor(props: QuestionProps, id?: string) {
+    this.title = props.title;
+    this.content = props.content;
+    this.authorId = props.authorId;
+    this.id = id ?? uuidV4();
+  }
+}

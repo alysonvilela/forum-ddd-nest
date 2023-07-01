@@ -6,7 +6,8 @@
   "author": "Alyson Vilela <ctt.alysonvilela@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test:all": "vitest run"
+    "test:all": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
