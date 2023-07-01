@@ -5,8 +5,16 @@
   "repository": "https://github.com/alysonvilela/forum-ddd-nest.git",
   "author": "Alyson Vilela <ctt.alysonvilela@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test:all": "vitest run"
+  },
   "devDependencies": {
     "@types/node": "^20.3.3",
-    "typescript": "^5.1.6"
+    "@types/uuid": "^9.0.2",
+    "typescript": "^5.1.6",
+    "vitest": "^0.32.2"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
