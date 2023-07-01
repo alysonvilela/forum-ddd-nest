@@ -1,0 +1,12 @@
+{
+  "name": "forum-ddd-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alysonvilela/forum-ddd-nest.git",
+  "author": "Alyson Vilela <ctt.alysonvilela@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "typescript": "^5.1.6"
+  }
+}
