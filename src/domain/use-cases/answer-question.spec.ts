@@ -11,7 +11,9 @@ test("create an answer", async () => {
    content: 'Uma resposta',
    instructorId: '1',
    questionId: '1',
-  })
+  }, 'teste')
+
+  console.log({answer})
 
   expect(answer.content).toEqual('Uma resposta')
 });
