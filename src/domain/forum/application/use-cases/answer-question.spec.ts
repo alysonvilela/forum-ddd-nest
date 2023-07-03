@@ -1,4 +1,4 @@
-import { InMemoryAnswersRepository } from '../repositories/implementation/answers-repository-in-memory'
+import { InMemoryAnswersRepository } from '@/test/repositories/answers-repository-in-memory'
 import { AnswerQuestionUseCase } from './answer-question'
 
 let inMemoryAnswersRepository: InMemoryAnswersRepository
