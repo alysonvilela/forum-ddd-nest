@@ -1,17 +1,17 @@
-import { v4 as uuidV4 } from "uuid";
+import { v4 as uuidV4 } from 'uuid'
 
 export class UniqueEntityID {
-  private value: string;
+  private value: string
 
   toString() {
-    return this.value;
+    return this.value
   }
 
   toValue() {
-    return this.value;
+    return this.value
   }
 
   constructor(value?: string) {
-    this.value = value ?? uuidV4();
+    this.value = value ?? uuidV4()
   }
 }
