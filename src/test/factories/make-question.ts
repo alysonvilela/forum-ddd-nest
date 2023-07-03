@@ -6,7 +6,7 @@ import {
 import { faker } from '@faker-js/faker'
 
 export function makeQuestion(
-  override: Partial<QuestionProps>,
+  override?: Partial<QuestionProps>,
   id?: UniqueEntityID,
 ) {
   return Question.create(
