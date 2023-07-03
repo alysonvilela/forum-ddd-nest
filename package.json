@@ -6,7 +6,7 @@
   "author": "Alyson Vilela <ctt.alysonvilela@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test:all": "vitest run",
+    "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix"

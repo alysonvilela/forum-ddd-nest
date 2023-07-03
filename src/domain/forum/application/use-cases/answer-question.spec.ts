@@ -6,10 +6,10 @@ const inMemoryAnswersRepository = new InMemoryAnswersRepository()
 test('create an answer', async () => {
   const answerQuestion = new AnswerQuestionUseCase(inMemoryAnswersRepository)
   const answer = await answerQuestion.execute({
-    content: 'Uma resposta',
+    content: 'Some response',
     instructorId: '1',
     questionId: '1',
   })
 
-  expect(answer.content).toEqual('Uma resposta')
+  expect(answer.content).toEqual('Some response')
 })
