@@ -1,5 +1,5 @@
-import { AnswerQuestionUseCase } from './answer-question'
 import { InMemoryAnswersRepository } from '../repositories/implementation/answers-repository-in-memory'
+import { AnswerQuestionUseCase } from './answer-question'
 
 const inMemoryAnswersRepository = new InMemoryAnswersRepository()
 
@@ -10,8 +10,6 @@ test('create an answer', async () => {
     instructorId: '1',
     questionId: '1',
   })
-
-  console.log({ answer })
 
   expect(answer.content).toEqual('Uma resposta')
 })
