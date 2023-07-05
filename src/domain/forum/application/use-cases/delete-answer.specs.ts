@@ -2,6 +2,7 @@ import { InMemoryAnswersRepository } from '@/test/repositories/answers-repositor
 import { DeleteAnswerUseCase } from './delete-answer'
 import { makeAnswer } from '@/test/factories/make-answer'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
+import { NotAllowed } from './errors/not-allowed'
 
 let inMemoryAnswersRepository: InMemoryAnswersRepository
 let sut: DeleteAnswerUseCase
@@ -38,11 +39,11 @@ describe('Delete Answer', () => {
     )
     inMemoryAnswersRepository.create(newAnswer)
 
-    await expect(
-      sut.execute({
-        authorId: 'author-2',
-        answerId: 'answer-1',
-      }),
-    ).rejects.toBeInstanceOf(Error)
+    const result = await sut.execute({
+      authorId: 'author-2',
+      answerId: 'answer-1',
+    })
+    expect(result.isLeft()).toBeTruthy()
+    expect(result.value).toBeInstanceOf(NotAllowed)
   })
 })
